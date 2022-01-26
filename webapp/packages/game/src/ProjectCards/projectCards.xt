@@ -1,0 +1,20 @@
+import { newCardDeck } from "../deck";
+import { OpenStarTerVillageType as type } from "../types";
+import projectCards from '../data/card/projects.json';
+
+export const init = (decks: type.State.Root['decks']): type.State.Root['decks'] => {
+  const projects = newCardDeck<type.Card.Project>(projectCards.map(card => card.name));
+
+  return {
+    ...decks,
+    projects,
+  }
+}
+
+export const shuffle = (decks, shuffler) => {
+
+}
+
+export const draw = (decks: type.State.Root['decks'], players: type.State.Root['players'], n: number) => {
+  const
+}
